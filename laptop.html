@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+        <html lang="id">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Laptop Price Analysis &amp; Prediction | Najwar Putra</title>
+          <meta name="description" content="Predictive analytics project exploring laptop pricing through data cleaning, feature engineering, visualization, and regression modeling." />
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="styles.css" />
+          <script>
+            window.STREAMLIT_LINKS = {"laptop": "https://laptoppricepred-najwar.streamlit.app/", "bank": "https://bank-analysis-najwar.streamlit.app/", "film": "https://filmrecom-awer.streamlit.app/", "flower": "https://flowerclassification-najwar.streamlit.app/"};
+          </script>
+        </head>
+        <body>
+          <div class="bg-grid" aria-hidden="true"></div>
+          <header class="topbar">
+            <div class="brand">
+              <span class="brand-dot"></span>
+              <span>NAJWAR.PUTRA</span>
+            </div>
+            <nav class="nav">
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link active" href="laptop.html">Laptop</a>
+<a class="nav-link" href="bank.html">Bank</a>
+<a class="nav-link" href="film.html">Film</a>
+<a class="nav-link" href="flower.html">Flower</a>
+<a class="nav-link" href="chicken.html">Chicken AI</a>
+</nav>
+          </header>
+          <main>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Predictive Analytics</div>
+        <h1>Understanding Laptop Pricing Through Data.</h1>
+        <p>
+          This project transforms raw laptop specifications into structured pricing insights and a predictive model.
+          The workflow covers <strong>data cleaning, feature engineering, exploratory analysis, visualization,
+          and regression modeling</strong> to understand which characteristics matter most when estimating laptop prices.
+        </p>
+        <div class="hero-links">
+          <a class="btn primary" href="#laptop-overview">Explore Analysis</a>
+          <a class="btn secondary" href="#" data-streamlit-key="laptop">Live Demo</a>
+          <a class="btn ghost" href="index.html">Back to Portfolio</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-stats">
+
+      <div class="card">
+        <div class="card-label">Rows after clean</div>
+        <div class="card-value">1.303</div>
+        <div class="card-note">Duplicate rows removed</div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-label">Median price</div>
+        <div class="card-value">Rp17.097.500</div>
+        <div class="card-note">Converted to IDR</div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-label">Avg RAM</div>
+        <div class="card-value">8.4 GB</div>
+        <div class="card-note">Feature summary</div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-label">Top brand</div>
+        <div class="card-value">Dell</div>
+        <div class="card-note">Most frequent vendor</div>
+      </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="kpi-grid">
+
+      <div class="card accent">
+        <div class="card-label">R²</div>
+        <div class="card-value">0.763</div>
+        <div class="card-note">RandomForest benchmark</div>
+      </div>
+
+
+      <div class="card accent">
+        <div class="card-label">MAE</div>
+        <div class="card-value">Rp3.867.888</div>
+        <div class="card-note">Average absolute error</div>
+      </div>
+
+
+      <div class="card accent">
+        <div class="card-label">RMSE</div>
+        <div class="card-value">Rp6.072.946</div>
+        <div class="card-note">Root mean squared error</div>
+      </div>
+
+
+      <div class="card accent">
+        <div class="card-label">Top Brand</div>
+        <div class="card-value">Dell</div>
+        <div class="card-note">Most common label</div>
+      </div>
+
+    </div>
+
+      <section class="section" id="laptop-overview">
+        <div class="section-head">
+          <div class="eyebrow">Case Study</div>
+          <h2>From Raw Specifications to Price Prediction</h2>
+          <p>The analysis connects data preparation, visual exploration, feature importance, and model evaluation into one practical predictive workflow.</p>
+        </div>
+
+        <div class="chart-grid two">
+          <figure class="panel"><img src="assets/charts/laptop_price_dist.png" alt="Laptop price distribution"><figcaption>Laptop price distribution</figcaption></figure>
+          <figure class="panel"><img src="assets/charts/laptop_top_brand.png" alt="Top brand laptop"><figcaption>Top brand laptop</figcaption></figure>
+          <figure class="panel"><img src="assets/charts/laptop_corr.png" alt="Correlation heatmap"><figcaption>Key numerical relationships</figcaption></figure>
+          <figure class="panel"><img src="assets/charts/laptop_feature_importance.png" alt="Feature importance"><figcaption>Top feature importance</figcaption></figure>
+        </div>
+        <div class="two-col">
+          <div class="panel pad">
+            <h3>Key Findings</h3>
+            <ul class="bullet-list">
+              <li>Data preparation removed duplicate records and transformed key hardware attributes into model-ready features.</li>
+              <li>RAM and weight were engineered into usable numerical signals, creating a stable benchmark for prediction.</li>
+              <li>The price distribution is right-skewed, while tree-based modeling provides a practical baseline for nonlinear relationships.</li>
+            </ul>
+          </div>
+          <div class="panel pad">
+            <h3>Model &amp; Methodology</h3>
+            <p>
+              A RandomForestRegressor benchmark uses vendor, device type, operating system, screen size,
+              RAM, and weight to estimate laptop prices. The model provides a practical baseline while feature importance helps explain which variables contribute most to the prediction.
+            </p>
+            <div class="metric-list">
+              <div><span>Training size</span><strong>1,042</strong></div>
+              <div><span>Test size</span><strong>261</strong></div>
+              <div><span>Benchmark model</span><strong>Random Forest</strong></div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+          </main>
+          <footer class="footer">
+            <div>Najwar Putra · Laptop Price Analysis</div>
+            <div><a href="index.html">Back to portfolio</a></div>
+          </footer>
+          <script>
+  document.querySelectorAll('[data-streamlit-key="laptop"]').forEach(function(el){ el.href = "https://laptoppricepred-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="bank"]').forEach(function(el){ el.href = "https://bank-analysis-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="film"]').forEach(function(el){ el.href = "https://filmrecom-awer.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="flower"]').forEach(function(el){ el.href = "https://flowerclassification-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="chicken"]').forEach(function(el){ el.href = "https://mumoci.streamlit.app/"; });
+</script>
+        </body>
+        </html>

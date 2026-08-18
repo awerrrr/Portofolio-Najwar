@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multimodal AI | Chicken Disease Detection | Najwar Putra</title>
+  <meta name="description" content="End-to-end multimodal AI project combining image and symptom information for automated chicken disease identification." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .ai-flow {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:14px;
+    }
+    .ai-node {
+      border:1px solid var(--line); border-radius:18px; padding:20px;
+      background:linear-gradient(160deg, rgba(27,34,30,.96), rgba(19,24,22,.96));
+    }
+    .ai-node.feature {
+      border-color:rgba(79,179,169,.35);
+      background:linear-gradient(160deg, rgba(20,34,31,.98), rgba(18,24,22,.98));
+    }
+    .ai-node-label {
+      font-family:var(--mono); font-size:11px; text-transform:uppercase;
+      letter-spacing:.14em; color:var(--teal);
+    }
+    .ai-node h3 { margin-top:10px; }
+    .ai-node p { margin-bottom:0; }
+    .ai-arrow {
+      display:flex; align-items:center; justify-content:center;
+      font-family:var(--mono); color:var(--amber); font-size:22px;
+    }
+    .feature-grid {
+      display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+    }
+    .feature-item {
+      border:1px solid var(--line); border-radius:16px; padding:18px;
+      background:rgba(255,255,255,.015);
+    }
+    .feature-item .feature-icon {
+      font-size:24px; margin-bottom:10px;
+    }
+    .feature-item h3 { margin-bottom:6px; font-size:18px; }
+    @media (max-width: 780px) {
+      .ai-flow, .feature-grid { grid-template-columns:1fr; }
+      .ai-arrow { transform:rotate(90deg); }
+    }
+  </style>
+  <script>
+    window.STREAMLIT_LINKS = {"laptop": "https://laptoppricepred-najwar.streamlit.app/", "film": "https://filmrecom-awer.streamlit.app/", "bank": "https://bank-analysis-najwar.streamlit.app/", "flower": "https://flowerclassification-najwar.streamlit.app/", "chicken": "https://mumoci.streamlit.app/"};
+  </script>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <span>NAJWAR.PUTRA</span>
+    </div>
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Home</a>
+<a class="nav-link" href="laptop.html">Laptop</a>
+<a class="nav-link" href="bank.html">Bank</a>
+<a class="nav-link" href="film.html">Film</a>
+<a class="nav-link" href="flower.html">Flower</a>
+<a class="nav-link active" href="chicken.html">Chicken AI</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Featured · Multimodal Artificial Intelligence</div>
+        <h1>Combining Image &amp; Symptom Data to Support Disease Identification.</h1>
+        <p>
+          An end-to-end <strong>Multimodal AI</strong> system that combines <strong>visual information
+          from chicken images</strong> with <strong>textual symptom information</strong> to support automated disease identification.
+          The project explores how multiple data modalities can complement each other when solving a real-world classification problem.
+        </p>
+        <p>
+          Developed as a final academic project for the <strong>Associate Degree in Information Systems,
+          Universitas Gunadarma (2026)</strong>.
+        </p>
+        <div class="hero-links">
+          <a class="btn primary" href="#project-overview">Explore System</a>
+          <a class="btn secondary" href="#" data-streamlit-key="chicken">Live Demo</a>
+          <a class="btn ghost" href="index.html">Back to Portfolio</a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="hero-stats">
+          <div class="card">
+            <div class="card-label">AI Paradigm</div>
+            <div class="card-value">Multimodal</div>
+            <div class="card-note">Image + Text</div>
+          </div>
+          <div class="card">
+            <div class="card-label">Image Model</div>
+            <div class="card-value">CNN</div>
+            <div class="card-note">Disease image classification</div>
+          </div>
+          <div class="card">
+            <div class="card-label">Text Signal</div>
+            <div class="card-value">Symptoms</div>
+            <div class="card-note">Information extraction</div>
+          </div>
+          <div class="card">
+            <div class="card-label">Deployment</div>
+            <div class="card-value">Streamlit</div>
+            <div class="card-note">End-to-end inference</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="kpi-grid">
+      <div class="card accent">
+        <div class="card-label">Input modality</div>
+        <div class="card-value">2 signals</div>
+        <div class="card-note">Image + symptom text</div>
+      </div>
+      <div class="card accent">
+        <div class="card-label">Primary task</div>
+        <div class="card-value">Disease ID</div>
+        <div class="card-note">Automatic identification</div>
+      </div>
+      <div class="card accent">
+        <div class="card-label">Evaluation</div>
+        <div class="card-value">Classification</div>
+        <div class="card-note">Report + confusion matrix</div>
+      </div>
+      <div class="card accent">
+        <div class="card-label">Pipeline</div>
+        <div class="card-value">End-to-end</div>
+        <div class="card-note">Preprocess → inference</div>
+      </div>
+    </div>
+
+    <section class="section" id="project-overview">
+      <div class="section-head">
+        <div class="eyebrow">System Overview</div>
+        <h2>How the Multimodal Pipeline Works</h2>
+        <p>
+          Two complementary sources of evidence are processed and brought together to support disease identification.
+          The pipeline demonstrates an end-to-end approach that moves from raw inputs to model inference and a usable interface.
+        </p>
+      </div>
+
+      <div class="ai-flow">
+        <div class="ai-node feature">
+          <div class="ai-node-label">Modality 01</div>
+          <h3>🖼️ Chicken Image</h3>
+          <p>The image branch uses <strong>CNN-based classification</strong> to learn visual patterns associated with the target disease categories.</p>
+        </div>
+        <div class="ai-arrow">→</div>
+        <div class="ai-node feature">
+          <div class="ai-node-label">Modality 02</div>
+          <h3>📝 Symptom Text</h3>
+          <p>Textual symptom descriptions provide an additional information source that captures observations not directly visible in the image.</p>
+        </div>
+      </div>
+
+      <div class="ai-flow">
+        <div class="ai-node">
+          <div class="ai-node-label">Integration</div>
+          <h3>🔗 Multimodal Integration</h3>
+          <p>Image and text signals are brought together so the system can reason from more than one source of evidence during inference.</p>
+        </div>
+        <div class="ai-arrow">→</div>
+        <div class="ai-node">
+          <div class="ai-node-label">Output</div>
+          <h3>🐔 Disease Identification</h3>
+          <p>The final output supports early identification and provides an interpretable starting point for further action or expert assessment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="eyebrow">Key Capabilities</div>
+        <h2>From Model Experiment to Usable AI System</h2>
+        <p>The project brings together four capabilities that define the multimodal workflow.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-item">
+          <div class="feature-icon">🧠</div>
+          <h3>Image Classification (CNN)</h3>
+          <p class="card-note">Learns visual patterns from chicken images using a Convolutional Neural Network approach for disease classification.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📝</div>
+          <h3>Text-based Information Extraction</h3>
+          <p class="card-note">Uses symptom descriptions as an additional signal to capture information that may not be available from the image alone.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🔗</div>
+          <h3>Multimodal Integration</h3>
+          <p class="card-note">Combines complementary image and text signals to support a more informed prediction.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📊</div>
+          <h3>Model Evaluation</h3>
+          <p class="card-note">Uses classification reports and confusion matrices to inspect model behavior and performance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="two-col">
+        <div class="panel pad">
+          <div class="eyebrow">Potential Impact</div>
+          <h3>Why the Problem Matters</h3>
+          <ul class="bullet-list">
+            <li><strong>Earlier disease indication</strong> through automated analysis of visual and symptom information.</li>
+            <li><strong>More informed decisions</strong> by combining evidence that would otherwise be assessed separately.</li>
+            <li><strong>Practical accessibility</strong> through an interactive application rather than a model that exists only inside a notebook.</li>
+          </ul>
+        </div>
+
+        <div class="panel pad">
+          <div class="eyebrow">Project Positioning</div>
+          <h3>From Model to Usable System</h3>
+          <p>
+            The project goes beyond model experimentation. It connects preprocessing, multimodal processing, evaluation,
+            and inference into an end-to-end application that can be accessed through Streamlit.
+          </p>
+          <div class="metric-list">
+            <div><span>Architecture</span><strong>Multimodal AI</strong></div>
+            <div><span>Visual branch</span><strong>CNN</strong></div>
+            <div><span>Text branch</span><strong>Symptom information</strong></div>
+            <div><span>Demo</span><strong>Streamlit</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="eyebrow">Access</div>
+        <h2>See the System in Action</h2>
+        <p>Explore the deployed application to see how the multimodal workflow translates into an interactive user experience.</p>
+      </div>
+      <div class="panel pad">
+        <div class="hero-links">
+          <a class="btn primary" href="https://mumoci.streamlit.app/" target="_blank" rel="noopener">Launch Live Demo</a>
+          <a class="btn ghost" href="index.html">Back to Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>Najwar Putra · Multimodal AI</div>
+    <div><a href="index.html">Back to portfolio</a></div>
+  </footer>
+
+  
+<script>
+  document.querySelectorAll('[data-streamlit-key="laptop"]').forEach(function(el){ el.href = "https://laptoppricepred-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="bank"]').forEach(function(el){ el.href = "https://bank-analysis-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="film"]').forEach(function(el){ el.href = "https://filmrecom-awer.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="flower"]').forEach(function(el){ el.href = "https://flowerclassification-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="chicken"]').forEach(function(el){ el.href = "https://mumoci.streamlit.app/"; });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+        <html lang="id">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Bank Customer &amp; Transaction Analytics | Najwar Putra</title>
+          <meta name="description" content="Business analytics project combining exploratory analysis, clustering, classification, and visualization to understand banking transaction patterns." />
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="styles.css" />
+          <script>
+            window.STREAMLIT_LINKS = {"laptop": "https://laptoppricepred-najwar.streamlit.app/", "bank": "https://bank-analysis-najwar.streamlit.app/", "film": "https://filmrecom-awer.streamlit.app/", "flower": "https://flowerclassification-najwar.streamlit.app/"};
+          </script>
+        </head>
+        <body>
+          <div class="bg-grid" aria-hidden="true"></div>
+          <header class="topbar">
+            <div class="brand">
+              <span class="brand-dot"></span>
+              <span>NAJWAR.PUTRA</span>
+            </div>
+            <nav class="nav">
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link" href="laptop.html">Laptop</a>
+<a class="nav-link active" href="bank.html">Bank</a>
+<a class="nav-link" href="film.html">Film</a>
+<a class="nav-link" href="flower.html">Flower</a>
+<a class="nav-link" href="chicken.html">Chicken AI</a>
+</nav>
+          </header>
+          <main>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Business Analytics</div>
+        <h1>Finding Patterns Behind Banking Data.</h1>
+        <p>
+          This project explores banking transaction data to uncover patterns, behavioral segments, and predictive signals.
+          It combines <strong>exploratory data analysis, visualization, clustering, and classification</strong> to turn structured transaction data into a clearer analytical story.
+        </p>
+        <div class="hero-links">
+          <a class="btn primary" href="#bank-overview">Explore Analysis</a>
+          <a class="btn secondary" href="#" data-streamlit-key="bank">Live Demo</a>
+          <a class="btn ghost" href="index.html">Back to Portfolio</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-stats">
+
+      <div class="card">
+        <div class="card-label">Rows</div>
+        <div class="card-value">2.286</div>
+        <div class="card-note">Transaction level records</div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-label">Dominant share</div>
+        <div class="card-value">58.49%</div>
+        <div class="card-note">Largest target class</div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-label">Avg amount</div>
+        <div class="card-value">-0.15</div>
+        <div class="card-note">Normalized amount</div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-label">Unique channel</div>
+        <div class="card-value">3</div>
+        <div class="card-note">Operational spread</div>
+      </div>
+
+        </div>
+      </div>
+    </section>
+    <div class="kpi-grid">
+
+      <div class="card accent">
+        <div class="card-label">Accuracy</div>
+        <div class="card-value">99.34%</div>
+        <div class="card-note">RandomForest benchmark</div>
+      </div>
+
+
+      <div class="card accent">
+        <div class="card-label">F1 Score</div>
+        <div class="card-value">99.35%</div>
+        <div class="card-note">Classification quality</div>
+      </div>
+
+
+      <div class="card accent">
+        <div class="card-label">Silhouette</div>
+        <div class="card-value">0.243</div>
+        <div class="card-note">KMeans separation</div>
+      </div>
+
+
+      <div class="card accent">
+        <div class="card-label">Clusters</div>
+        <div class="card-value">3</div>
+        <div class="card-note">PCA preview</div>
+      </div>
+
+    </div>
+
+      <section class="section" id="bank-overview">
+        <div class="section-head">
+          <div class="eyebrow">Case Study</div>
+          <h2>From Transaction Data to Actionable Patterns</h2>
+          <p>The project combines descriptive and predictive approaches to understand what the data contains, how records group together, and how available features can support classification.</p>
+        </div>
+
+        <div class="chart-grid two">
+          <figure class="panel"><img src="assets/charts/bank_target_dist.png" alt="Target distribution"><figcaption>Target distribution</figcaption></figure>
+          <figure class="panel"><img src="assets/charts/bank_locations.png" alt="Top locations"><figcaption>Most active locations</figcaption></figure>
+          <figure class="panel"><img src="assets/charts/bank_amount_box.png" alt="Transaction amount boxplot"><figcaption>Transaction amount vs target</figcaption></figure>
+          <figure class="panel"><img src="assets/charts/bank_clusters.png" alt="Cluster preview"><figcaption>Cluster preview with PCA</figcaption></figure>
+        </div>
+        <div class="two-col">
+          <div class="panel pad">
+            <h3>Key Findings</h3>
+            <ul class="bullet-list">
+              <li>The analysis combines segmentation and classification to provide complementary views of the same transaction data.</li>
+              <li>PCA visualization helps communicate cluster structure visually rather than relying only on numerical cluster labels.</li>
+              <li>A compact feature set keeps the classification workflow interpretable and lightweight while preserving strong benchmark performance.</li>
+            </ul>
+          </div>
+          <div class="panel pad">
+            <h3>Model &amp; Methodology</h3>
+            <p>
+              RandomForestClassifier provides the supervised benchmark, while KMeans is used to explore potential groupings in the transaction data. PCA is then used as a visual aid to communicate cluster structure more intuitively.
+            </p>
+            <div class="metric-list">
+              <div><span>Train size</span><strong>1,828</strong></div>
+              <div><span>Test size</span><strong>458</strong></div>
+              <div><span>Features used</span><strong>9</strong></div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+          </main>
+          <footer class="footer">
+            <div>Najwar Putra · Bank Analytics</div>
+            <div><a href="index.html">Back to portfolio</a></div>
+          </footer>
+          <script>
+  document.querySelectorAll('[data-streamlit-key="laptop"]').forEach(function(el){ el.href = "https://laptoppricepred-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="bank"]').forEach(function(el){ el.href = "https://bank-analysis-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="film"]').forEach(function(el){ el.href = "https://filmrecom-awer.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="flower"]').forEach(function(el){ el.href = "https://flowerclassification-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="chicken"]').forEach(function(el){ el.href = "https://mumoci.streamlit.app/"; });
+</script>
+        </body>
+        </html>

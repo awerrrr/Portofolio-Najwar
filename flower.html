@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+        <html lang="id">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Flower Image Classification | Najwar Putra</title>
+          <meta name="description" content="Computer vision project demonstrating image classification, dataset exploration, model evaluation, and deployment-ready assets." />
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="styles.css" />
+          <script>
+            window.STREAMLIT_LINKS = {"laptop": "https://laptoppricepred-najwar.streamlit.app/", "bank": "https://bank-analysis-najwar.streamlit.app/", "film": "https://filmrecom-awer.streamlit.app/", "flower": "https://flowerclassification-najwar.streamlit.app/"};
+          </script>
+        </head>
+        <body>
+          <div class="bg-grid" aria-hidden="true"></div>
+          <header class="topbar">
+            <div class="brand">
+              <span class="brand-dot"></span>
+              <span>NAJWAR.PUTRA</span>
+            </div>
+            <nav class="nav">
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link" href="laptop.html">Laptop</a>
+<a class="nav-link" href="bank.html">Bank</a>
+<a class="nav-link" href="film.html">Film</a>
+<a class="nav-link active" href="flower.html">Flower</a>
+<a class="nav-link" href="chicken.html">Chicken AI</a>
+</nav>
+          </header>
+          <main>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Computer Vision</div>
+        <h1>Teaching Machines to Recognize Visual Patterns.</h1>
+        <p>
+          This project explores image classification across five flower categories, combining dataset exploration,
+          visual analysis, model evaluation, and deployment-ready assets into a compact computer vision workflow.
+        </p>
+        <div class="hero-links">
+          <a class="btn primary" href="#flower-overview">Explore Analysis</a>
+          <a class="btn secondary" href="#" data-streamlit-key="flower">Live Demo</a>
+          <a class="btn ghost" href="index.html">Back to Portfolio</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-stats">
+
+      <div class="card">
+        <div class="card-label">Total images</div>
+        <div class="card-value">4.999</div>
+        <div class="card-note">Dataset size</div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-label">Classes</div>
+        <div class="card-value">5</div>
+        <div class="card-note">Flower categories</div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-label">Dominant</div>
+        <div class="card-value">Lotus</div>
+        <div class="card-note">Largest class</div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-label">Balance ratio</div>
+        <div class="card-value">1.00</div>
+        <div class="card-note">Min / max count</div>
+      </div>
+
+        </div>
+      </div>
+    </section>
+    <div class="kpi-grid">
+
+      <div class="card accent">
+        <div class="card-label">Model files</div>
+        <div class="card-value">4 formats</div>
+        <div class="card-note">Keras, SavedModel, TFLite, TFJS</div>
+      </div>
+
+
+      <div class="card accent">
+        <div class="card-label">Gallery</div>
+        <div class="card-value">5 samples</div>
+        <div class="card-note">One image per class</div>
+      </div>
+
+
+      <div class="card accent">
+        <div class="card-label">Deployment ready</div>
+        <div class="card-value">Yes</div>
+        <div class="card-note">Export assets available</div>
+      </div>
+
+
+      <div class="card accent">
+        <div class="card-label">Technical Focus</div>
+        <div class="card-value">Visual bumbu</div>
+        <div class="card-note">Portfolio enhancer</div>
+      </div>
+
+    </div>
+
+      <section class="section" id="flower-overview">
+        <div class="section-head">
+          <div class="eyebrow">Case Study</div>
+          <h2>Image Data, Classification, and Deployment</h2>
+          <p>The project demonstrates an applied computer vision workflow, from understanding class distribution to preparing model assets for multiple deployment environments.</p>
+        </div>
+
+        <div class="chart-grid two">
+          <figure class="panel"><img src="assets/charts/flower_counts.png" alt="Flower class distribution"><figcaption>Flower class distribution</figcaption></figure>
+          <div class="panel pad">
+            <h3>Deployment-Ready Assets</h3>
+            <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>format</th>
+      <th>file</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Keras</td>
+      <td>best_model.keras</td>
+    </tr>
+    <tr>
+      <td>SavedModel</td>
+      <td>saved_model/</td>
+    </tr>
+    <tr>
+      <td>TensorFlow Lite</td>
+      <td>tflite/model.tflite</td>
+    </tr>
+    <tr>
+      <td>TensorFlow.js</td>
+      <td>modeltfjs/</td>
+    </tr>
+  </tbody>
+</table>
+            <div class="metric-list">
+              <div><span>Stored formats</span><strong>4</strong></div>
+              <div><span>Visual classes</span><strong>5</strong></div>
+              <div><span>Gallery scope</span><strong>Publish-ready</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="section-head" style="margin-top: 18px;">
+          <div class="eyebrow">Visual Exploration</div>
+          <p>Representative samples make the class differences easier to inspect and communicate before evaluating the model.</p>
+        </div>
+        <div class="gallery-grid">
+
+        <div class="gallery-item panel">
+          <img src="assets/flower/lilly.jpg" alt="Lilly">
+          <div class="gallery-meta">
+            <strong>Lilly</strong>
+            <span>999 images</span>
+          </div>
+        </div>
+
+
+        <div class="gallery-item panel">
+          <img src="assets/flower/lotus.jpg" alt="Lotus">
+          <div class="gallery-meta">
+            <strong>Lotus</strong>
+            <span>1000 images</span>
+          </div>
+        </div>
+
+
+        <div class="gallery-item panel">
+          <img src="assets/flower/orchid.jpg" alt="Orchid">
+          <div class="gallery-meta">
+            <strong>Orchid</strong>
+            <span>1000 images</span>
+          </div>
+        </div>
+
+
+        <div class="gallery-item panel">
+          <img src="assets/flower/sunflower.jpg" alt="Sunflower">
+          <div class="gallery-meta">
+            <strong>Sunflower</strong>
+            <span>1000 images</span>
+          </div>
+        </div>
+
+
+        <div class="gallery-item panel">
+          <img src="assets/flower/tulip.jpg" alt="Tulip">
+          <div class="gallery-meta">
+            <strong>Tulip</strong>
+            <span>1000 images</span>
+          </div>
+        </div>
+
+        </div>
+        <div class="two-col" style="margin-top: 24px;">
+          <div class="panel pad">
+            <h3>Key Takeaways</h3>
+            <ul class="bullet-list">
+              <li>Five clearly defined classes make visual inspection an important part of understanding the dataset.</li>
+              <li>Multiple deployment formats demonstrate that the work extends beyond experimentation into practical model delivery.</li>
+              <li>Class-level visualization helps communicate what the model is expected to recognize before focusing on performance metrics.</li>
+            </ul>
+          </div>
+          <div class="panel pad">
+            <h3>Project Positioning</h3>
+            <p>
+              This project complements my data portfolio with hands-on computer vision experience, demonstrating that I can work with unstructured image data as well as structured business datasets.
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+          </main>
+          <footer class="footer">
+            <div>Najwar Putra · Computer Vision</div>
+            <div><a href="index.html">Back to portfolio</a></div>
+          </footer>
+          <script>
+  document.querySelectorAll('[data-streamlit-key="laptop"]').forEach(function(el){ el.href = "https://laptoppricepred-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="bank"]').forEach(function(el){ el.href = "https://bank-analysis-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="film"]').forEach(function(el){ el.href = "https://filmrecom-awer.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="flower"]').forEach(function(el){ el.href = "https://flowerclassification-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="chicken"]').forEach(function(el){ el.href = "https://mumoci.streamlit.app/"; });
+</script>
+        </body>
+        </html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+        <html lang="id">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Film Recommendation System | Najwar Putra</title>
+          <meta name="description" content="Recommendation system project using movie metadata, TF-IDF, and similarity analysis to generate content-based recommendations." />
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="styles.css" />
+          <script>
+            window.STREAMLIT_LINKS = {"laptop": "https://laptoppricepred-najwar.streamlit.app/", "bank": "https://bank-analysis-najwar.streamlit.app/", "film": "https://filmrecom-awer.streamlit.app/", "flower": "https://flowerclassification-najwar.streamlit.app/"};
+          </script>
+        </head>
+        <body>
+          <div class="bg-grid" aria-hidden="true"></div>
+          <header class="topbar">
+            <div class="brand">
+              <span class="brand-dot"></span>
+              <span>NAJWAR.PUTRA</span>
+            </div>
+            <nav class="nav">
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link" href="laptop.html">Laptop</a>
+<a class="nav-link" href="bank.html">Bank</a>
+<a class="nav-link active" href="film.html">Film</a>
+<a class="nav-link" href="flower.html">Flower</a>
+<a class="nav-link" href="chicken.html">Chicken AI</a>
+</nav>
+          </header>
+          <main>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Recommendation System</div>
+        <h1>Turning Movie Data Into Personalized Recommendations.</h1>
+        <p>
+          This project explores how movie metadata and rating behavior can be transformed into a recommendation experience.
+          It combines <strong>exploratory analysis, TF-IDF feature representation, and similarity analysis</strong>
+          to identify movies with comparable characteristics.
+        </p>
+        <div class="hero-links">
+          <a class="btn primary" href="#film-overview">Explore Analysis</a>
+          <a class="btn secondary" href="#" data-streamlit-key="film">Live Demo</a>
+          <a class="btn ghost" href="index.html">Back to Portfolio</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-stats">
+
+      <div class="card">
+        <div class="card-label">Movies</div>
+        <div class="card-value">9.742</div>
+        <div class="card-note">Catalog size</div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-label">Ratings</div>
+        <div class="card-value">100.836</div>
+        <div class="card-note">Interaction volume</div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-label">Avg rating</div>
+        <div class="card-value">3.50</div>
+        <div class="card-note">User preference signal</div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-label">Genres</div>
+        <div class="card-value">20</div>
+        <div class="card-note">Distinct genre labels</div>
+      </div>
+
+        </div>
+      </div>
+    </section>
+    <div class="kpi-grid">
+
+      <div class="card accent">
+        <div class="card-label">Top movie</div>
+        <div class="card-value">Antz (1998)</div>
+        <div class="card-note">Similarity anchor</div>
+      </div>
+
+
+      <div class="card accent">
+        <div class="card-label">Top rec score</div>
+        <div class="card-value">1.00</div>
+        <div class="card-note">Genre similarity</div>
+      </div>
+
+
+      <div class="card accent">
+        <div class="card-label">High rating pool</div>
+        <div class="card-value">10</div>
+        <div class="card-note">Movies with 50+ ratings</div>
+      </div>
+
+
+      <div class="card accent">
+        <div class="card-label">Base model</div>
+        <div class="card-value">TF-IDF + Cosine</div>
+        <div class="card-note">Content-based engine</div>
+      </div>
+
+    </div>
+
+      <section class="section" id="film-overview">
+        <div class="section-head">
+          <div class="eyebrow">Case Study</div>
+          <h2>From Movie Metadata to Similarity</h2>
+          <p>The analysis combines catalog exploration with content-based similarity to show how structured metadata can support personalized discovery.</p>
+        </div>
+
+        <div class="chart-grid two">
+          <figure class="panel"><img src="assets/charts/film_genres.png" alt="Top genres"><figcaption>Genre distribution</figcaption></figure>
+          <figure class="panel"><img src="assets/charts/film_avg_genre.png" alt="Average genre rating"><figcaption>Average rating by genre</figcaption></figure>
+          <figure class="panel"><img src="assets/charts/film_rating_dist.png" alt="Rating distribution"><figcaption>Rating distribution</figcaption></figure>
+          <figure class="panel"><img src="assets/charts/film_top_movies.png" alt="Most rated movies"><figcaption>Most-rated movies</figcaption></figure>
+        </div>
+        <div class="two-col">
+          <div class="panel pad">
+            <h3>Similar Movie Recommendations</h3>
+            <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>title</th>
+      <th>genres</th>
+      <th>similarity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Antz (1998)</td>
+      <td>Adventure|Animation|Children|Comedy|Fantasy</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <td>Toy Story 2 (1999)</td>
+      <td>Adventure|Animation|Children|Comedy|Fantasy</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <td>Adventures of Rocky and Bullwinkle, The (2000)</td>
+      <td>Adventure|Animation|Children|Comedy|Fantasy</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <td>Emperor's New Groove, The (2000)</td>
+      <td>Adventure|Animation|Children|Comedy|Fantasy</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <td>Monsters, Inc. (2001)</td>
+      <td>Adventure|Animation|Children|Comedy|Fantasy</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <td>Wild, The (2006)</td>
+      <td>Adventure|Animation|Children|Comedy|Fantasy</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <td>Shrek the Third (2007)</td>
+      <td>Adventure|Animation|Children|Comedy|Fantasy</td>
+      <td>1.00</td>
+    </tr>
+  </tbody>
+</table>
+          </div>
+          <div class="panel pad">
+            <h3>Key Findings</h3>
+            <ul class="bullet-list">
+              <li>Genre provides a simple and interpretable signal for building a lightweight content-based recommendation approach.</li>
+              <li>The rating distribution is concentrated around the mid-to-high range, providing a useful signal for understanding audience preference.</li>
+              <li>Similarity-based recommendations make the analytical output tangible by turning metadata relationships into an interactive user experience.</li>
+            </ul>
+            <div class="metric-list">
+              <div><span>Recommendation anchor</span><strong>Toy Story (1995)</strong></div>
+              <div><span>Returned items</span><strong>7</strong></div>
+              <div><span>Method</span><strong>TF-IDF / Cosine</strong></div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+          </main>
+          <footer class="footer">
+            <div>Najwar Putra · Film Recommendation</div>
+            <div><a href="index.html">Back to portfolio</a></div>
+          </footer>
+          <script>
+  document.querySelectorAll('[data-streamlit-key="laptop"]').forEach(function(el){ el.href = "https://laptoppricepred-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="bank"]').forEach(function(el){ el.href = "https://bank-analysis-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="film"]').forEach(function(el){ el.href = "https://filmrecom-awer.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="flower"]').forEach(function(el){ el.href = "https://flowerclassification-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="chicken"]').forEach(function(el){ el.href = "https://mumoci.streamlit.app/"; });
+</script>
+        </body>
+        </html>
