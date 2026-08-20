@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Najwar Putra | Data, AI &amp; Intelligent Systems Portfolio</title>
 <meta content="Najwar Putra's portfolio across data analytics, machine learning, computer vision, recommendation systems, and multimodal AI." name="description"/>
+<link rel="icon" type="image/png" href="assets/favicon.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Najwar Putra | Data, AI &amp; Intelligent Systems Portfolio"/>
+<meta property="og:description" content="Najwar Putra's portfolio across data analytics, machine learning, computer vision, recommendation systems, and multimodal AI."/>
+<meta property="og:url" content="https://awerrrr.github.io/Portofolio_Najwar/"/>
+<meta property="og:image" content="https://awerrrr.github.io/Portofolio_Najwar/assets/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Najwar Putra | Data, AI &amp; Intelligent Systems Portfolio"/>
+<meta name="twitter:description" content="Najwar Putra's portfolio across data analytics, machine learning, computer vision, recommendation systems, and multimodal AI."/>
+<meta name="twitter:image" content="https://awerrrr.github.io/Portofolio_Najwar/assets/og-image.png"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -25,9 +35,6 @@
     .topbar-contact{margin-left:0}
   }
 </style>
-<script>
-            window.STREAMLIT_LINKS = {"laptop": "https://laptoppricepred-najwar.streamlit.app/", "bank": "https://bank-analysis-najwar.streamlit.app/", "film": "https://filmrecom-awer.streamlit.app/", "flower": "https://flowerclassification-najwar.streamlit.app/"};
-          </script>
 </link></head>
 <body>
 <div aria-hidden="true" class="bg-grid"></div>
@@ -216,11 +223,21 @@
 <div><a href="index.html">Back to home</a></div>
 </footer>
 <script>
-  document.querySelectorAll('[data-streamlit-key="laptop"]').forEach(function(el){ el.href = "https://laptoppricepred-najwar.streamlit.app/"; });
-  document.querySelectorAll('[data-streamlit-key="bank"]').forEach(function(el){ el.href = "https://bank-analysis-najwar.streamlit.app/"; });
-  document.querySelectorAll('[data-streamlit-key="film"]').forEach(function(el){ el.href = "https://filmrecom-awer.streamlit.app/"; });
-  document.querySelectorAll('[data-streamlit-key="flower"]').forEach(function(el){ el.href = "https://flowerclassification-najwar.streamlit.app/"; });
-  document.querySelectorAll('[data-streamlit-key="chicken"]').forEach(function(el){ el.href = "https://mumoci.streamlit.app/"; });
+  var STREAMLIT_DEMO_LINKS = {
+    laptop: "https://laptoppricepred-najwar.streamlit.app/",
+    bank: "https://bank-analysis-najwar.streamlit.app/",
+    film: "https://filmrecom-awer.streamlit.app/",
+    flower: "https://flowerclassification-najwar.streamlit.app/",
+    chicken: "https://mumoci.streamlit.app/"
+  };
+  document.querySelectorAll('[data-streamlit-key]').forEach(function(el){
+    var url = STREAMLIT_DEMO_LINKS[el.getAttribute('data-streamlit-key')];
+    if (url) {
+      el.href = url;
+      el.target = "_blank";
+      el.rel = "noopener";
+    }
+  });
 </script>
 </body>
 </html>
