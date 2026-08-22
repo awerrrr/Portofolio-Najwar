@@ -6,16 +6,6 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Najwar Putra | Data, AI &amp; Intelligent Systems Portfolio</title>
 <meta content="Najwar Putra's portfolio across data analytics, machine learning, computer vision, recommendation systems, and multimodal AI." name="description"/>
-<link rel="icon" type="image/png" href="assets/favicon.png"/>
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="Najwar Putra | Data, AI &amp; Intelligent Systems Portfolio"/>
-<meta property="og:description" content="Najwar Putra's portfolio across data analytics, machine learning, computer vision, recommendation systems, and multimodal AI."/>
-<meta property="og:url" content="https://awerrrr.github.io/Portofolio_Najwar/"/>
-<meta property="og:image" content="https://awerrrr.github.io/Portofolio_Najwar/assets/og-image.png"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Najwar Putra | Data, AI &amp; Intelligent Systems Portfolio"/>
-<meta name="twitter:description" content="Najwar Putra's portfolio across data analytics, machine learning, computer vision, recommendation systems, and multimodal AI."/>
-<meta name="twitter:image" content="https://awerrrr.github.io/Portofolio_Najwar/assets/og-image.png"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -35,6 +25,9 @@
     .topbar-contact{margin-left:0}
   }
 </style>
+<script>
+            window.STREAMLIT_LINKS = {"laptop": "https://laptoppricepred-najwar.streamlit.app/", "bank": "https://bank-analysis-najwar.streamlit.app/", "film": "https://filmrecom-awer.streamlit.app/", "flower": "https://flowerclassification-najwar.streamlit.app/", "chicken": "https://mumoci.streamlit.app/"};
+          </script>
 </link></head>
 <body>
 <div aria-hidden="true" class="bg-grid"></div>
@@ -45,11 +38,11 @@
 </div>
 <nav class="nav">
 <a class="nav-link active" href="index.html">Home</a>
-<a class="nav-link" href="laptop.html">Laptop</a>
+<a class="nav-link" href="chicken.html">Featured AI</a>
 <a class="nav-link" href="bank.html">Bank</a>
+<a class="nav-link" href="laptop.html">Laptop</a>
 <a class="nav-link" href="film.html">Film</a>
-<a class="nav-link" href="flower.html">Flower</a>
-<a class="nav-link" href="chicken.html">Chicken AI</a>
+<a class="nav-link" href="flower.html">Vision</a>
 </nav>
 <div class="topbar-contact">
 <a aria-label="Email" href="mailto:najwar1105@gmail.com" title="Email">
@@ -84,7 +77,7 @@
 <div class="card">
 <div class="card-label">Projects</div>
 <div class="card-value">5</div>
-<div class="card-note">End-to-end analytical &amp; AI work</div>
+<div class="card-note">Projects across Data, ML &amp; AI</div>
 </div>
 <div class="card">
 <div class="card-label">Core Focus</div>
@@ -130,60 +123,74 @@
 <div class="section-head">
 <div class="eyebrow">Selected Work</div>
 <h2>Projects Built to Solve Problems</h2>
-<p>Each project demonstrates a different stage of my journey from data analysis to applied AI — combining technical execution with clear communication and practical outcomes.</p>
+<p>A connected portfolio that shows how my work progresses from understanding structured data to building predictive models, intelligent systems, computer vision, and multimodal AI applications.</p>
 </div>
 <div class="project-grid">
-
-
-
-
-
+<article class="project-card">
+<div class="project-tag">Featured · Multimodal AI</div>
+<h3>Chicken Disease Detection</h3>
+<p>My most comprehensive AI project: an end-to-end multimodal system that combines chicken images and symptom information to support automated disease identification and early decision-making.</p>
+<div class="project-bottom">
+<span class="project-metric">2 Modalities · Image + Symptoms</span>
+<a class="btn small" href="chicken.html">View Featured Project</a>
+<a class="btn small secondary" data-streamlit-key="chicken" href="#">Live Demo</a>
+</div>
+</article>
 <article class="project-card">
 <div class="project-tag">Business Analytics</div>
 <h3>Bank Customer &amp; Transaction Analytics</h3>
-<p>Exploring transaction patterns through EDA, segmentation, clustering, classification, and decision-oriented visualization.</p>
+<p>Analyzing 2,286 banking transactions across 43 locations, then combining clustering and Random Forest classification to achieve 99.34% accuracy on the target prediction task.</p>
 <div class="project-bottom">
-<span class="project-metric">2 approaches</span>
+<span class="project-metric">2,286 Transactions · 99.34% Accuracy</span>
 <a class="btn small" href="bank.html">View Case Study</a>
 <a class="btn small secondary" data-streamlit-key="bank" href="#">Live Demo</a>
 </div>
-</article><article class="project-card">
+</article>
+<article class="project-card">
 <div class="project-tag">Predictive Analytics</div>
 <h3>Laptop Price Analysis &amp; Prediction</h3>
-<p>From raw specifications to pricing insights through data cleaning, feature engineering, visualization, and regression modeling.</p>
+<p>Using 1,303 cleaned laptop records to transform product specifications into pricing insights and an XGBoost regression model with an R² of 0.9067.</p>
 <div class="project-bottom">
-<span class="project-metric">R² / MAE</span>
+<span class="project-metric">1,303 Laptops · R² 0.9067</span>
 <a class="btn small" href="laptop.html">View Case Study</a>
 <a class="btn small secondary" data-streamlit-key="laptop" href="#">Live Demo</a>
 </div>
-</article><article class="project-card">
-<div class="project-tag">Featured · Multimodal AI</div>
-<h3>Chicken Disease Detection</h3>
-<p>An end-to-end multimodal AI system combining image and symptom information to support automated disease identification and early decision-making.</p>
-<div class="project-bottom">
-<span class="project-metric">Image + Text</span>
-<a class="btn small" href="chicken.html">View Case Study</a>
-<a class="btn small secondary" data-streamlit-key="chicken" href="#">Live Demo</a>
-</div>
-</article><article class="project-card">
+</article>
+<article class="project-card">
 <div class="project-tag">Recommendation System</div>
 <h3>Film Recommendation System</h3>
-<p>Turning movie metadata and rating behavior into content-based recommendations using TF-IDF and similarity analysis.</p>
+<p>Building content-based recommendations from 9,742 movies and 100,836 ratings by transforming movie metadata into TF-IDF features and cosine-similarity scores.</p>
 <div class="project-bottom">
-<span class="project-metric">TF-IDF</span>
+<span class="project-metric">9,742 Movies · 100,836 Ratings</span>
 <a class="btn small" href="film.html">View Case Study</a>
 <a class="btn small secondary" data-streamlit-key="film" href="#">Live Demo</a>
 </div>
-</article><article class="project-card">
-<div class="project-tag">Computer Vision</div>
+</article>
+<article class="project-card">
+<div class="project-tag">Computer Vision Foundation</div>
 <h3>Flower Image Classification</h3>
-<p>Applied computer vision project covering image exploration, multi-class classification, evaluation, and deployment-ready model assets.</p>
+<p>A computer vision foundation built around 4,999 labeled flower images across 5 balanced classes, supporting multi-class image classification and interactive inference.</p>
 <div class="project-bottom">
-<span class="project-metric">5 classes</span>
+<span class="project-metric">4,999 Images · 5 Classes</span>
 <a class="btn small" href="flower.html">View Case Study</a>
 <a class="btn small secondary" data-streamlit-key="flower" href="#">Live Demo</a>
 </div>
-</article></div>
+</article>
+</div>
+</section>
+
+<section class="section">
+<div class="section-head">
+<div class="eyebrow">Portfolio Journey</div>
+<h2>A Progression From Data to Applied AI</h2>
+<p>These projects are intentionally presented as a connected learning journey rather than isolated experiments.</p>
+</div>
+<div class="two-col">
+<div class="panel pad"><h3>01 · Understand &amp; Predict</h3><p>Bank and Laptop projects build the foundation: explore data, identify patterns, engineer useful features, and turn evidence into predictions.</p></div>
+<div class="panel pad"><h3>02 · Build Intelligent Systems</h3><p>The Film project expands that foundation into feature representation and similarity-based recommendations.</p></div>
+<div class="panel pad"><h3>03 · Learn From Images</h3><p>Flower Classification introduces computer vision and visual pattern recognition with deep learning.</p></div>
+<div class="panel pad"><h3>04 · Integrate Multiple Modalities</h3><p>Chicken Disease Detection brings the journey together by combining image and symptom information into a practical multimodal AI application.</p></div>
+</div>
 </section>
 <section class="section">
 <div class="section-head">
@@ -223,21 +230,11 @@
 <div><a href="index.html">Back to home</a></div>
 </footer>
 <script>
-  var STREAMLIT_DEMO_LINKS = {
-    laptop: "https://laptoppricepred-najwar.streamlit.app/",
-    bank: "https://bank-analysis-najwar.streamlit.app/",
-    film: "https://filmrecom-awer.streamlit.app/",
-    flower: "https://flowerclassification-najwar.streamlit.app/",
-    chicken: "https://mumoci.streamlit.app/"
-  };
-  document.querySelectorAll('[data-streamlit-key]').forEach(function(el){
-    var url = STREAMLIT_DEMO_LINKS[el.getAttribute('data-streamlit-key')];
-    if (url) {
-      el.href = url;
-      el.target = "_blank";
-      el.rel = "noopener";
-    }
-  });
+  document.querySelectorAll('[data-streamlit-key="laptop"]').forEach(function(el){ el.href = "https://laptoppricepred-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="bank"]').forEach(function(el){ el.href = "https://bank-analysis-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="film"]').forEach(function(el){ el.href = "https://filmrecom-awer.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="flower"]').forEach(function(el){ el.href = "https://flowerclassification-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="chicken"]').forEach(function(el){ el.href = "https://mumoci.streamlit.app/"; });
 </script>
 </body>
 </html>

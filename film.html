@@ -1,40 +1,18 @@
 <!DOCTYPE html>
-        <html lang="en">
+        <html lang="id">
         <head>
           <meta charset="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>Film Recommendation System | Najwar Putra</title>
           <meta name="description" content="Recommendation system project using movie metadata, TF-IDF, and similarity analysis to generate content-based recommendations." />
-          <link rel="icon" type="image/png" href="assets/favicon.png"/>
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="Film Recommendation System | Najwar Putra"/>
-<meta property="og:description" content="Recommendation system project using movie metadata, TF-IDF, and similarity analysis to generate content-based recommendations."/>
-<meta property="og:url" content="https://awerrrr.github.io/Portofolio_Najwar/film.html"/>
-<meta property="og:image" content="https://awerrrr.github.io/Portofolio_Najwar/assets/og-image.png"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Film Recommendation System | Najwar Putra"/>
-<meta name="twitter:description" content="Recommendation system project using movie metadata, TF-IDF, and similarity analysis to generate content-based recommendations."/>
-<meta name="twitter:image" content="https://awerrrr.github.io/Portofolio_Najwar/assets/og-image.png"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
           <link rel="stylesheet" href="styles.css" />
-<style>
-  .topbar-contact{display:flex;align-items:center;gap:14px;margin-left:24px}
-  .topbar-contact a{display:inline-flex;align-items:center;color:inherit;opacity:.75;transition:opacity .15s ease}
-  .topbar-contact a:hover{opacity:1}
-  .topbar-contact svg{width:18px;height:18px}
-  .footer-contact{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin:8px 0;font-size:.9em}
-  .footer-contact a{display:inline-flex;align-items:center;gap:6px;color:inherit;opacity:.85;text-decoration:none}
-  .footer-contact a:hover{opacity:1;text-decoration:underline}
-  .footer-contact svg{width:15px;height:15px}
-  .footer-sep{opacity:.4}
-  @media (max-width:720px){
-    .topbar{flex-wrap:wrap;row-gap:10px}
-    .topbar-contact{margin-left:0}
-  }
-</style>
-          </head>
+          <script>
+            window.STREAMLIT_LINKS = {"laptop": "https://laptoppricepred-najwar.streamlit.app/", "bank": "https://bank-analysis-najwar.streamlit.app/", "film": "https://filmrecom-awer.streamlit.app/", "flower": "https://flowerclassification-najwar.streamlit.app/"};
+          </script>
+        </head>
         <body>
           <div class="bg-grid" aria-hidden="true"></div>
           <header class="topbar">
@@ -48,20 +26,9 @@
 <a class="nav-link" href="bank.html">Bank</a>
 <a class="nav-link active" href="film.html">Film</a>
 <a class="nav-link" href="flower.html">Flower</a>
-<a class="nav-link" href="chicken.html">Chicken AI</a>
+<a class="nav-link" href="chicken.html">Featured AI</a>
 </nav>
-          <div class="topbar-contact">
-<a aria-label="Email" href="mailto:najwar1105@gmail.com" title="Email">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 6-10 7L2 6"></path></svg>
-</a>
-<a aria-label="LinkedIn" href="https://www.linkedin.com/in/najwarputra" rel="noopener noreferrer" target="_blank" title="LinkedIn">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-</a>
-<a aria-label="WhatsApp" href="https://wa.me/6285175110533" rel="noopener noreferrer" target="_blank" title="WhatsApp">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 21l1.65-4.95A9 9 0 1 1 8 19.5z"></path><path d="M8.5 9.5c0 3.5 3 6 6 6l1-2-3-1.5-1 1c-1-.6-2-1.5-2.5-2.5l1-1L8.5 7.5z"></path></svg>
-</a>
-</div>
-</header>
+          </header>
           <main>
 
     <section class="hero">
@@ -69,7 +36,7 @@
         <div class="eyebrow">Recommendation System</div>
         <h1>Turning Movie Data Into Personalized Recommendations.</h1>
         <p>
-          This project explores how movie metadata and rating behavior can be transformed into a recommendation experience.
+          This project expands my machine learning work beyond prediction by transforming movie metadata into feature representations and using similarity analysis to generate content-based recommendations.
           It combines <strong>exploratory analysis, TF-IDF feature representation, and similarity analysis</strong>
           to identify movies with comparable characteristics.
         </p>
@@ -92,7 +59,7 @@
       <div class="card">
         <div class="card-label">Ratings</div>
         <div class="card-value">100.836</div>
-        <div class="card-note">Interaction volume</div>
+        <div class="card-note">User rating records</div>
       </div>
 
 
@@ -106,7 +73,7 @@
       <div class="card">
         <div class="card-label">Genres</div>
         <div class="card-value">20</div>
-        <div class="card-note">Distinct genre labels</div>
+        <div class="card-note">Genre labels represented</div>
       </div>
 
         </div>
@@ -226,31 +193,14 @@
           </main>
           <footer class="footer">
             <div>Najwar Putra · Film Recommendation</div>
-            <div class="footer-contact">
-<a href="mailto:najwar1105@gmail.com">najwar1105@gmail.com</a>
-<span class="footer-sep">·</span>
-<a href="https://www.linkedin.com/in/najwarputra" rel="noopener noreferrer" target="_blank">linkedin.com/in/najwarputra</a>
-<span class="footer-sep">·</span>
-<a href="https://wa.me/6285175110533" rel="noopener noreferrer" target="_blank">+62 851-7511-0533</a>
-</div>
-<div><a href="index.html">Back to portfolio</a></div>
+            <div><a href="index.html">Back to portfolio</a></div>
           </footer>
           <script>
-  var STREAMLIT_DEMO_LINKS = {
-    laptop: "https://laptoppricepred-najwar.streamlit.app/",
-    bank: "https://bank-analysis-najwar.streamlit.app/",
-    film: "https://filmrecom-awer.streamlit.app/",
-    flower: "https://flowerclassification-najwar.streamlit.app/",
-    chicken: "https://mumoci.streamlit.app/"
-  };
-  document.querySelectorAll('[data-streamlit-key]').forEach(function(el){
-    var url = STREAMLIT_DEMO_LINKS[el.getAttribute('data-streamlit-key')];
-    if (url) {
-      el.href = url;
-      el.target = "_blank";
-      el.rel = "noopener";
-    }
-  });
+  document.querySelectorAll('[data-streamlit-key="laptop"]').forEach(function(el){ el.href = "https://laptoppricepred-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="bank"]').forEach(function(el){ el.href = "https://bank-analysis-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="film"]').forEach(function(el){ el.href = "https://filmrecom-awer.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="flower"]').forEach(function(el){ el.href = "https://flowerclassification-najwar.streamlit.app/"; });
+  document.querySelectorAll('[data-streamlit-key="chicken"]').forEach(function(el){ el.href = "https://mumoci.streamlit.app/"; });
 </script>
         </body>
         </html>
