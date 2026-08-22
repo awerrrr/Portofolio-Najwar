@@ -36,7 +36,19 @@ a{color:inherit}
 .topbar,.footer,.hero,.section{position:relative; z-index:1}
 .topbar{
   max-width:1280px; margin:0 auto; padding:20px 28px;
-  display:flex; justify-content:space-between; align-items:center; gap:16px;
+  display:grid; grid-template-columns:minmax(180px,1fr) auto minmax(180px,1fr);
+  align-items:center; gap:20px;
+}
+.topbar .brand{justify-self:start}
+.topbar .nav{justify-self:center; justify-content:center}
+.topbar .topbar-contact{justify-self:end}
+.topbar-contact{display:flex; align-items:center; justify-content:flex-end; gap:14px}
+.topbar-contact a{display:inline-flex; align-items:center; color:inherit; opacity:.75; transition:opacity .15s ease}
+.topbar-contact a:hover{opacity:1}
+.topbar-contact svg{width:18px; height:18px}
+
+.brand-logo{
+  width:32px; height:32px; flex:0 0 32px; display:block; object-fit:cover; border-radius:8px;
 }
 .brand{
   display:flex; align-items:center; gap:10px; font-family:var(--mono); font-weight:700; letter-spacing:.03em;

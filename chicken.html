@@ -50,6 +50,16 @@
       overflow:hidden; border:1px solid var(--line); border-radius:18px;
       background:linear-gradient(160deg, rgba(27,34,30,.96), rgba(19,24,22,.96));
     }
+    .preview-grid > .preview-card:nth-child(2) {
+      grid-column: 1 / -1;
+      width: min(100%, 680px);
+      margin: 0 auto;
+    }
+
+    .preview-grid > .preview-card:nth-child(2) img {
+      display: block;
+      margin: 0 auto;
+    }
     .preview-card.preview-wide { grid-column:1 / -1; }
     .preview-card img {
       width:100%; display:block; background:#fff; object-fit:contain; max-height:520px;
@@ -74,23 +84,41 @@
   <script>
     window.STREAMLIT_LINKS = {"laptop": "https://laptoppricepred-najwar.streamlit.app/", "film": "https://filmrecom-awer.streamlit.app/", "bank": "https://bank-analysis-najwar.streamlit.app/", "flower": "https://flowerclassification-najwar.streamlit.app/", "chicken": "https://mumoci.streamlit.app/"};
   </script>
+<link rel="icon" type="image/png" sizes="512x512" href="assets/brand/favicon.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Najwar Putra | Data, AI & Intelligent Systems"/>
+<meta property="og:description" content="Najwar Putra portfolio across data analytics, machine learning, computer vision, recommendation systems, and multimodal AI."/>
+<meta property="og:image" content="assets/brand/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="assets/brand/og-image.png"/>
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
   <header class="topbar">
     <div class="brand">
-      <span class="brand-dot"></span>
+      <img class="brand-logo" src="assets/brand/favicon.png" alt="Najwar Putra logo"/>
       <span>NAJWAR.PUTRA</span>
     </div>
     <nav class="nav">
-      <a class="nav-link" href="index.html">Home</a>
-<a class="nav-link" href="laptop.html">Laptop</a>
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link active" href="chicken.html">Chicken AI</a>
 <a class="nav-link" href="bank.html">Bank</a>
+<a class="nav-link" href="laptop.html">Laptop</a>
 <a class="nav-link" href="film.html">Film</a>
 <a class="nav-link" href="flower.html">Flower</a>
-<a class="nav-link active" href="chicken.html">Chicken AI</a>
-    </nav>
-  </header>
+</nav>
+  <div class="topbar-contact">
+<a aria-label="Email" href="mailto:najwar1105@gmail.com" title="Email">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 6-10 7L2 6"></path></svg>
+</a>
+<a aria-label="LinkedIn" href="https://www.linkedin.com/in/najwarputra" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+</a>
+<a aria-label="WhatsApp" href="https://wa.me/6285175110533" rel="noopener noreferrer" target="_blank" title="WhatsApp">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 21l1.65-4.95A9 9 0 1 1 8 19.5z"></path><path d="M8.5 9.5c0 3.5 3 6 6 6l1-2-3-1.5-1 1c-1-.6-1.5-1.5-2.5-2.5l1-1L8.5 7.5z"></path></svg>
+</a>
+</div>
+</header>
 
   <main>
     <section class="hero">
@@ -221,15 +249,6 @@
         </article>
 
         <article class="preview-card">
-          <img src="assets/chicken/confusion-matrix.png" alt="Best accuracy model confusion matrix" loading="lazy">
-          <div class="preview-copy">
-            <div class="project-tag">Best Accuracy Model</div>
-            <h3>Confusion Matrix</h3>
-            <p>Shows the distribution of correct and incorrect predictions across all target classes.</p>
-          </div>
-        </article>
-
-        <article class="preview-card">
           <img src="assets/chicken/classification-report.png" alt="Classification report of the best accuracy multimodal model" loading="lazy">
           <div class="preview-copy">
             <div class="project-tag">Class-Level Metrics</div>
@@ -252,6 +271,14 @@
         </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div class="eyebrow">Key Capabilities</div>
+        <h2>From Model Experiment to Usable AI System</h2>
+        <p>The project brings together four capabilities that define the multimodal workflow.</p>
+      </div>
+
 
     <section class="section">
       <div class="section-head">
@@ -330,6 +357,11 @@
 
   <footer class="footer">
     <div>Najwar Putra · Multimodal AI</div>
+    <div class="footer-contact">
+<a href="mailto:najwar1105@gmail.com">najwar1105@gmail.com</a><span class="footer-sep">·</span>
+<a href="https://www.linkedin.com/in/najwarputra" rel="noopener noreferrer" target="_blank">linkedin.com/in/najwarputra</a><span class="footer-sep">·</span>
+<a href="https://wa.me/6285175110533" rel="noopener noreferrer" target="_blank">WhatsApp</a>
+</div>
     <div><a href="index.html">Back to portfolio</a></div>
   </footer>
 
