@@ -167,12 +167,20 @@ figcaption{
 }
 .footer a{color:var(--teal); text-decoration:none}
 
-.project-grid .project-card:last-child{
-  border-color:rgba(79,179,169,.34);
-  background:linear-gradient(160deg, rgba(20,34,31,.98), rgba(18,24,22,.98));
+/* Featured project: Multimodal AI / Chicken */
+.project-grid .project-card:first-child{
+  border-color:rgba(232,163,61,.65);
+  background:linear-gradient(160deg, rgba(36,30,18,.98), rgba(21,27,23,.98));
+  box-shadow:0 0 0 1px rgba(232,163,61,.08), var(--shadow);
 }
-@media (min-width: 1101px){
-  .project-grid .project-card:last-child{grid-column:span 1;}
+.project-grid .project-card:first-child .project-tag{
+  color:var(--amber);
+}
+.project-grid .project-card:first-child .project-metric{
+  color:var(--amber);
+}
+@media (min-width:1101px){
+  .project-grid .project-card:first-child{grid-column:span 2;}
 }
 
 @media (max-width: 1100px){
