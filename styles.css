@@ -10,7 +10,7 @@
   --blue:#8fb9ff;
   --shadow:0 18px 40px rgba(0,0,0,.25);
   --mono:'JetBrains Mono', monospace;
-  --sans:'IBM Plex Sans', system-ui, sans-serif;
+  --sans:'Inter', system-ui, sans-serif;
 }
 
 *{
@@ -243,7 +243,7 @@ main{
   font-family:var(--mono);
   text-transform:uppercase;
   letter-spacing:.18em;
-  font-size:11px;
+  font-size:12px;
   color:var(--teal);
   margin-bottom:12px;
 }
@@ -350,7 +350,7 @@ h3{
 
 .card-label{
   font-family:var(--mono);
-  font-size:11px;
+  font-size:12px;
   color:var(--muted);
   text-transform:uppercase;
   letter-spacing:.14em;
@@ -426,7 +426,7 @@ h3{
   display:inline-flex;
   width:max-content;
   font-family:var(--mono);
-  font-size:11px;
+  font-size:12px;
   letter-spacing:.12em;
   text-transform:uppercase;
   color:var(--teal);
@@ -605,7 +605,7 @@ figcaption{
   font-family:var(--mono);
   color:var(--muted);
   text-transform:uppercase;
-  font-size:11px;
+  font-size:12px;
   letter-spacing:.12em;
 }
 
